@@ -1,5 +1,5 @@
 const express = require("express"); //importing express
-const router = express.Router();
+
 //creating app object
 const app = express(); //this express function returns app object
 
@@ -23,6 +23,8 @@ app.get("/about", (req, res) => {
   res.send("<h1>About Page</h1>");
 });
 
+
+//only for secondmiddleware
 
 app.get("/contact", secondmiddleware, (req, res) => {
   res.send("<h1>Contact Page</h1>");
